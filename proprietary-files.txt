@@ -798,7 +798,7 @@ vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 vendor/lib64/mt6835/libDR.so;SYMLINK=vendor/lib64/libDR.so
-vendor/lib64/mt6835/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
+vendor/lib64/mt6835/libmnl.so:vendor/lib64/mt6835/libmnl_mtk.so;FIX_SONAME;SYMLINK=vendor/lib64/libmnl_mtk.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 
 # Haptics
