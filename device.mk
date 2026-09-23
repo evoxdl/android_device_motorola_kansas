@@ -116,11 +116,6 @@ BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
 
-# Fastboot
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot-service.example_recovery \
-    fastbootd
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
