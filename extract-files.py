@@ -103,6 +103,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/hwcomposer.mtk_common.so' : blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
+        'vendor/lib64/libcodec2_mtk_vdec.so',
+        'vendor/lib64/libcodec2_mtk_venc.so'
+    ): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter_mtk.so'),
+    (
         'vendor/bin/mnld',
         'vendor/lib64/librgbwlightsensor.so',
         'vendor/lib64/mt6835/libaalservice.so',
