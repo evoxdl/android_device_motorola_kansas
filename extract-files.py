@@ -31,6 +31,7 @@ namespace_imports = [
     'device/motorola/kansas',
     'hardware/mediatek',
     'hardware/mediatek/libaedv',
+    'hardware/mediatek/libion_mtk',
     'hardware/mediatek/libmtkperf_client',
 ]
 

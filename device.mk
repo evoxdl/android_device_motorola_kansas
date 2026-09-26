@@ -303,6 +303,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/hidl/mtkpower/1.2/default \
     hardware/mediatek/libaedv \
+    hardware/mediatek/libion_mtk \
     hardware/mediatek/libmtkperf_client
 
 # USB
