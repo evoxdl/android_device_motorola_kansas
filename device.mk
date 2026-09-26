@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit common MediaTek IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
-DEVICE_PATH := device/xiaomi/air
+DEVICE_PATH := device/motorola/kansas
 
 # Linker config
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
@@ -246,7 +246,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml
 
 # Power
-$(call soong_config_set,power_libperfmgr,mode_extension_lib, //$(DEVICE_PATH):libperfmgr-ext-xiaomi)
+$(call soong_config_set,power_libperfmgr,mode_extension_lib, //$(DEVICE_PATH):libperfmgr-ext-motorola)
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub \
@@ -264,7 +264,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal \
+    android.hardware.sensors-service.multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0 \
     sensors.dynamic_sensor_hal
 
@@ -291,7 +291,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/hidl/mtkpower/1.2/default \
     hardware/mediatek/libaedv \
     hardware/mediatek/libmtkperf_client \
-    hardware/xiaomi
+    hardware/motorola
 
 # USB
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
@@ -343,4 +343,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/air/air-vendor.mk)
+$(call inherit-product, vendor/motorola/kansas/kansas-vendor.mk)

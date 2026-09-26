@@ -19,11 +19,11 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/air',
+    'device/motorola/kansas',
     'hardware/mediatek',
     'hardware/mediatek/libaedv',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/xiaomi',
+    'hardware/motorola',
 ]
 
 
@@ -119,8 +119,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'air',
-    'xiaomi',
+    'kansas',
+    'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

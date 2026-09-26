@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/air
-KERNEL_PATH := device/xiaomi/air-kernel
+DEVICE_PATH := device/motorola/kansas
+KERNEL_PATH := device/motorola/kansas-kernel
 
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
@@ -38,7 +38,7 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := cortex-a76
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := air
+TARGET_OTA_ASSERT_DEVICE := kansas
 
 # Boot image
 BOARD_BOOT_HEADER_VERSION := 4
@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
 TARGET_NO_KERNEL_OVERRIDE := true
 
 # Workaround to make lineage's soong generator work
-TARGET_KERNEL_SOURCE := device/xiaomi/air-kernel/kernel-headers
+TARGET_KERNEL_SOURCE := device/motorola/kansas-kernel/kernel-headers
 
 # Board Info
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -97,7 +97,7 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNE
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := air
+TARGET_BOOTLOADER_BOARD_NAME := kansas
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -204,7 +204,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
+    hardware/motorola/vintf/device_framework_matrix.xml
 
 # WiFi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -226,4 +226,4 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit the proprietary files
-include vendor/xiaomi/air/BoardConfigVendor.mk
+include vendor/motorola/kansas/BoardConfigVendor.mk

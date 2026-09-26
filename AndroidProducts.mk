@@ -4,4 +4,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_air.mk
+    $(LOCAL_DIR)/lineage_kansas.mk
