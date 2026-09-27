@@ -155,6 +155,9 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
 
+# NFC
+ro.vendor.hw.nfc=nq
+
 # Picture Quality
 persist.vendor.sys.pq.mtk_disp_clarity_support=0
 ro.vendor.mtk_aal_support=1
