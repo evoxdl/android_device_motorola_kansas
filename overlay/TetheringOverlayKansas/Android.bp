@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "TetheringConfigOverlayAir",
+    name: "TetheringConfigOverlayKansas",
     resource_dirs: ["res"],
     product_specific: true,
 }

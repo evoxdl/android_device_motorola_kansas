@@ -5,8 +5,9 @@
 //
 
 runtime_resource_overlay {
-    name: "FrameworksResOverlayAir",
+    name: "SystemUIOverlayKansas",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,
 }
+

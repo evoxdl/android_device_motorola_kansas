@@ -5,8 +5,8 @@
 //
 
 runtime_resource_overlay {
-    name: "WifiOverlayAir",
-    theme: "WifiOverlayAir",
+    name: "WifiOverlayKansas",
+    theme: "WifiOverlayKansas",
     certificate: "platform",
     vendor: true,
 }
