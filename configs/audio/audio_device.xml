@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <card name="mt6835mt6377" />
+    <outputdevice name="RCV_OUT" path="I2S3"/>
     <mixercontrol>
         <versioncontrol value="1.01">
         </versioncontrol>
@@ -24,12 +25,14 @@
             <kctl name="HPL Mux" value="Open" />
         </path>
         <!--receiver output-->
+        <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnon">
+            <kctl name="TFA Profile" value="receiver" />
+        </path>
+        <path name="RCV_OUT_DEVICE_CTRL_PRE_PMU" value="turnoff">
+        </path>
         <path name="receiver_output" value="turnon">
-            <kctl name="DAC In Mux" value="Normal Path" />
-            <kctl name="RCV Mux" value="Voice Playback" />
         </path>
         <path name="receiver_output" value="turnoff">
-            <kctl name="RCV Mux" value="Open" />
         </path>
         <!-- 2-in-1 speaker output-->
         <path name="two_in_one_speaker_output" value="turnon">
@@ -53,6 +56,19 @@
         </path>
         <path name="speaker_output" value="turnoff">
             <kctl name="LOL Mux" value="Open" />
+        </path>
+        <!--speaker setting-->
+        <path name="speaker_output_mode_music" value="setting">
+            <kctl name="TFA Profile" value="music" />
+        </path>
+        <path name="speaker_output_mode_voice" value="setting">
+            <kctl name="TFA Profile" value="voice" />
+        </path>
+        <path name="speaker_output_mode_bypass" value="setting">
+            <kctl name="TFA Profile" value="bypass" />
+        </path>
+        <path name="speaker_output_mode_ringtone" value="setting">
+            <kctl name="TFA Profile" value="ringtone" />
         </path>
         <!--headhpone dual analogPA speaker output-->
         <path name="headphoneDualSpeaker_output" value="turnon">
@@ -1392,8 +1408,8 @@
             <kctl name="HW_SRC_1_IN_CH2 DL3_CH2" value="1" />
             <kctl name="HW_SRC_1_IN_CH1 DL6_CH1" value="1" />
             <kctl name="HW_SRC_1_IN_CH2 DL6_CH2" value="1" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="1" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="1" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="1" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="1" />
         </path>
         <path name="VOW_BARGE_IN_ECHO" value="turnoff">
             <kctl name="HW_SRC_1_IN_CH1 DL1_CH1" value="0" />
@@ -1404,32 +1420,44 @@
             <kctl name="HW_SRC_1_IN_CH2 DL3_CH2" value="0" />
             <kctl name="HW_SRC_1_IN_CH1 DL6_CH1" value="0" />
             <kctl name="HW_SRC_1_IN_CH2 DL6_CH2" value="0" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="0" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="0" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="0" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="0" />
         </path>
         <path name="VOW_BARGE_IN_ECHO_SPEAKER_HIFI3" value="turnon">
             <kctl name="HW_SRC_1_IN_CH1 DL4_CH1" value="1" />
             <kctl name="HW_SRC_1_IN_CH2 DL4_CH2" value="1" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="1" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="1" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="1" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="1" />
         </path>
         <path name="VOW_BARGE_IN_ECHO_SPEAKER_HIFI3" value="turnoff">
             <kctl name="HW_SRC_1_IN_CH1 DL4_CH1" value="0" />
             <kctl name="HW_SRC_1_IN_CH2 DL4_CH2" value="0" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="0" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="0" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="0" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="0" />
+        </path>
+        <path name="VOW_BARGE_IN_ECHO_SPEAKER_SCP" value="turnon">
+            <kctl name="HW_SRC_1_IN_CH1 DL4_CH1" value="1" />
+            <kctl name="HW_SRC_1_IN_CH2 DL4_CH2" value="1" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="1" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="1" />
+        </path>
+        <path name="VOW_BARGE_IN_ECHO_SPEAKER_SCP" value="turnoff">
+            <kctl name="HW_SRC_1_IN_CH1 DL4_CH1" value="0" />
+            <kctl name="HW_SRC_1_IN_CH2 DL4_CH2" value="0" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="0" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="0" />
         </path>
         <path name="VOW_BARGE_IN_ECHO_DSP_SMARTPA" value="turnon">
             <kctl name="HW_SRC_1_IN_CH1 I2S0_CH1" value="1" />
             <kctl name="HW_SRC_1_IN_CH2 I2S0_CH2" value="1" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="1" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="1" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="1" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="1" />
         </path>
         <path name="VOW_BARGE_IN_ECHO_DSP_SMARTPA" value="turnoff">
             <kctl name="HW_SRC_1_IN_CH1 I2S0_CH1" value="0" />
             <kctl name="HW_SRC_1_IN_CH2 I2S0_CH2" value="0" />
-            <kctl name="UL2_CH1 SRC_1_OUT_CH1" value="0" />
-            <kctl name="UL2_CH2 SRC_1_OUT_CH2" value="0" />
+            <kctl name="UL9_CH1 SRC_1_OUT_CH1" value="0" />
+            <kctl name="UL9_CH2 SRC_1_OUT_CH2" value="0" />
         </path>
         <path name="reset_device_setting" value="setting">
             <kctl name="deep_buffer_scenario" value="0" />
