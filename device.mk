@@ -121,13 +121,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi \
-    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor \
-    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -170,20 +163,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6835 \
     fstab.mt6835.vendor_ramdisk \
+    fstab.enableswap \
     init.connectivity.common.rc \
     init_connectivity.rc \
-    init.mi_thermald.rc \
     init.modem.rc \
     init.mt6835.rc \
     init.mt6835.power.rc \
-    init.mt6835.usb.rc \
     init.recovery.mt6835.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.sensor_2_0.rc \
+    init.mt6835.usb.rc \
+    init.connectivity.rc \
+    init.mmi.rc \
+    init.mmi.overlay.rc \
     ueventd.mt6835.rc
 
 PRODUCT_PACKAGES += \
+    init.oem.fingerprint2.sh \
     init.insmod.sh \
     init.insmod.mt6835.cfg
 

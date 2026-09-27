@@ -4,6 +4,12 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+sh_binary {
+    name: "init.oem.fingerprint2.sh",
+    src: "init.oem.fingerprint2.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.insmod.mt6835.cfg",
     src: "init.insmod.mt6835.cfg",
@@ -24,6 +30,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "fstab.enableswap",
+    src: "fstab.enableswap",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.connectivity.common.rc",
     src: "init.connectivity.common.rc",
     relative_install_path: "init/hw",
@@ -34,13 +46,6 @@ prebuilt_etc {
     name: "init_connectivity.rc",
     src: "init_connectivity.rc",
     relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mi_thermald.rc",
-    src: "init.mi_thermald.rc",
-    sub_dir: "init/hw",
     vendor: true,
 }
 
@@ -89,6 +94,27 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.mt6835.usb.rc",
     src: "init.mt6835.usb.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mmi.overlay.rc",
+    src: "init.mmi.overlay.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mmi.rc",
+    src: "init.mmi.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "init.connectivity.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
