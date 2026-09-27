@@ -207,10 +207,6 @@
             "Type":"BATTERY"
         },
         {
-            "Name":"brightness0-clone",
-            "Type":"DISPLAY"
-        },
-        {
             "Name":"lcd-backlight",
             "Type":"DISPLAY"
         }
