@@ -81,16 +81,11 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # DRM
 ro.netflix.bsp_rev=MTK6835-36999-1
 
-# Fingerprint
-persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_modules=goodix,silead
-persist.vendor.fingerprint.sensor_location=681|749|145|local:4627039422300187648
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
 # Gatekeeper
-ro.hardware.gatekeeper=mitee
+ro.hardware.gatekeeper=trustonic
 
 # GNSS
 ro.vendor.gps.chrdev=gps_drv_stp
@@ -253,7 +248,6 @@ persist.vendor.radio.smart.data.switch=1
 # TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_microtrust_tee_support=1
-ro.vendor.mtk_mitee_support=1
 
 # WiFi
 ro.vendor.wifi.sap.concurrent.iface=ap1
@@ -263,4 +257,3 @@ ro.vendor.wlan.gen=gen4m_6835
 
 # Zygote
 zygote.critical_window.minute=10
-
