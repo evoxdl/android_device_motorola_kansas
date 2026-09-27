@@ -1,0 +1,3 @@
+# Inspect removable-storage partition directories.
+allow fsck_untrusted sysfs_devices_block:dir { search read open };
+allow fsck_untrusted sysfs_devices_block:file r_file_perms;

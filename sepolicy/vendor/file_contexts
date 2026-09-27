@@ -1,57 +1,76 @@
+# Codec2
+/vendor/bin/hw/android\.hardware\.media\.c2-mtk-service u:object_r:mtk_hal_c2_exec:s0
+
+# BIP modem socket
+/dev/socket/vendor\.bip_ap u:object_r:vendor_bip_ap_socket:s0
+
 # Camera
-/mnt/vendor/persist/camera(/.*)? u:object_r:camera_persist_file:s0
-/data/vendor/camera(/.*)? u:object_r:vendor_camera_data_file:s0
-/vendor/lib(64)?/com.xiaomi.plugin.mibokeh\.so            u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_dc_base\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_fullhdr\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_hdr_adapter_AncRawhdrLite\.so     u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_hdr_adapter_AncRawmfnrLite\.so    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_hdr_adapter_AncSuperNightLite\.so u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_hdr\.so                           u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_mfnr\.so                          u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_night\.so                         u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libanc_single_bokeh\.so                  u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_beautyshot\.so                u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_dualcam_refocus_image\.so     u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_dualcam_refocus\.so           u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_high_dynamic_range\.so        u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_low_light_hdr\.so             u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_portrait_lighting_c\.so       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_portrait_lighting\.so         u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_super_night_raw\.so           u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libarcsoft_supernight\.so                u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libcom.xiaomi.pluginutils\.so            u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgo_ai_vision\.so                  u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgoengine2\.so                     u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgoengine\.so                      u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmialgo_utils\.so                      u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_HDSR\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_ImageRefinerLite\.so           u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_ImageRefiner\.so               u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_Ldc\.so                        u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_Lowlight\.so                   u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmorpho_MFNR\.so                       u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libmpbase\.so                            u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libneuron_platform\.so                    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libneuron_runtime\.5\.so                 u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libneuron_runtime\.so                    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/librelight_only\.so                      u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libvpu\.so                                u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libwa_cap_refocus\.so                    u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libwa_dof\.so                            u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/mt6789/libneuron_runtime\.5\.so          u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/vendor.mediatek.hardware.camera.isphal@1.0\.so u:object_r:same_process_hal_file:s0
+/data/vendor/camera(/.*)?                                                              u:object_r:vendor_camera_data_file:s0
+/data/vendor/misc/imager(/.*)?                                                         u:object_r:vendor_imager_data_file:s0
+/data/vendor/misc/imager/metadata(/.*)?                                                u:object_r:vendor_imager_metadata_file:s0
+/data/vendor/misc/imager                                                               u:object_r:vendor_camera_data_file:s0
+/mnt/vendor/persist/camera(/.*)?                                                       u:object_r:vendor_persist_camera_file:s0
+/vendor/bin/hw/motorola\.hardware\.camera\.imgtuner\.aidl-service                      u:object_r:hal_camera_default_exec:s0
 
 # Fingerprint
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+/data/vendor/.fps(/.*)?                                                                     u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/egis(/.*)?                                                                     u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/focaltech(/.*)?                                                                u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/gf_data(/.*)?                                                                  u:object_r:fingerprint_vendor_data_file:s0
+/dev/esfp0                                                                                  u:object_r:etsd_device:s0
+/mnt/vendor/persist/egis(/.*)?                                                              u:object_r:vendor_persist_fingerprint_file:s0
+/mnt/vendor/persist/fps(/.*)?                                                               u:object_r:vendor_persist_fingerprint_file:s0
+/mnt/vendor/persist/goodix(/.*)?                                                            u:object_r:vendor_persist_fingerprint_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.motorola                 u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint(@2\.1)?([\-\.])focalservice       u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint(@2\.1)?([\-\.])goodixservice      u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/goodix_ident                                                                 u:object_r:hal_fingerprint_default_exec:s0
 
-# Keymint
-/(vendor|system/vendor)/bin/hw/android.hardware.security.keymint@2.0-service.mitee                     u:object_r:hal_keymint_default_exec:s0
+# Lights
+/vendor/bin/hw/android\.hardware\.lights-service\.mt6879                              u:object_r:hal_light_default_exec:s0
 
-# Sensor
-/vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                     u:object_r:hal_sensors_default_exec:s0
+# LiveDisplay
+/vendor/bin/hw/vendor\.lineage\.livedisplay-service\.mt6879                         u:object_r:hal_lineage_livedisplay_default_exec:s0
 
-# Thermal
-/(vendor|system/vendor)/bin/mi_thermald                                                                u:object_r:vendor_mi_thermald_exec:s0
+# Mobicore TEE
+/mnt/vendor/trustlet(/.*)? u:object_r:mnt_vendor_trustlet_file:s0
+/mnt/vendor/tzapp(/.*)? u:object_r:mnt_vendor_trustlet_file:s0
+/mnt/vendor/persist/mobicore(/.*)?        u:object_r:persist_mobicore_data_file:s0
+
+# Motobox
+/vendor/bin/motobox    u:object_r:vendor_motobox_exec:s0
+
+# Power
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal-service\.pixel                               u:object_r:hal_thermal_default_exec:s0
 /(vendor|system/vendor)/bin/thermal_symlinks                                                           u:object_r:init-thermal-symlinks-sh_exec:s0
+
+# Neural Networks
+/vendor/lib(64)?/libapusys\.so                                                         u:object_r:same_process_hal_file:s0
+
+# Touch HAL
+/vendor/bin/hw/vendor\.lineage\.touch-service\.motorola    u:object_r:hal_lineage_touch_default_exec:s0
+
+# Vendor init scripts
+/vendor/bin/hardware_revisions\.sh                                                     u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.backup\.trustlet\.sh                                            u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.block_perm\.sh                                                  u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.boot\.sh                                                        u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.touch\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.mmi\.usb\.sh                                                         u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.modprobe\.sh                                                         u:object_r:vendor_modinstall-sh_exec:s0
+/vendor/bin/init\.oem\.fingerprint2\.sh                                                 u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/init\.oem\.hw\.sh                                                          u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/vendor\.mmi\.cxp\.sh                                                       u:object_r:vendor_moto_init_shell_exec:s0
+/vendor/bin/nxpnfcinfo                                                                  u:object_r:nxpnfcinfo_exec:s0
+
+# Wakeups
+/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?                                     u:object_r:sysfs_wakeup:s0
+
+# Product persist and Trustonic TA partitions (including resolved device nodes).
+/dev/block/by-name/prodpersist u:object_r:vendor_prodpersist_block_device:s0
+/dev/block/sdc25 u:object_r:vendor_prodpersist_block_device:s0
+/dev/block/by-name/tzapp_a u:object_r:vendor_tzapp_block_device:s0
+/dev/block/sdc54 u:object_r:vendor_tzapp_block_device:s0

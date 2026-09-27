@@ -1,0 +1,10 @@
+allow init sysfs_power_supply:file { setattr };
+r_dir_file(init, sysfs_batteryinfo)
+set_prop(init, system_mot_radio_prop)
+set_prop(init, vendor_mot_prop)
+
+# Product persist mounting
+allow init mnt_product_file:dir mounton;
+
+# Socket declared by init.bip_ap.rc.
+allow init vendor_bip_ap_socket:sock_file { create setattr };

@@ -1,0 +1,2 @@
+# Use the socket created and passed by init.bip_ap.rc.
+allow bip_ap vendor_bip_ap_socket:sock_file { read write };

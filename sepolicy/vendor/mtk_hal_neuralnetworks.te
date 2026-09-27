@@ -1,3 +1,0 @@
-hal_client_domain(mtk_hal_neuralnetworks, hal_allocator)
-
-allow mtk_hal_neuralnetworks hidl_allocator_hwservice:hwservice_manager find;

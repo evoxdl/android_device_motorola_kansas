@@ -1,0 +1,6 @@
+# Inspect the product persist filesystem.
+allow vold mnt_product_file:dir { read open search ioctl };
+
+# vold probes mounted filesystems for FITRIM. These vendor data types are
+# protected by the core/vendor data neverallow; keep the probes denied.
+dontaudit vold { persist_data_file mnt_vendor_trustlet_file }:dir { read open search ioctl };

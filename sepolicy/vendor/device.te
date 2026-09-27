@@ -1,0 +1,10 @@
+# Fingerprint
+type etsd_device, dev_type;
+
+# Partitions
+type vendor_hw_block_device, dev_type;
+type vendor_utags_block_device, dev_type;
+
+# Filesystem checks of product persist and Trustonic TA partitions.
+type vendor_prodpersist_block_device, dev_type;
+type vendor_tzapp_block_device, dev_type;

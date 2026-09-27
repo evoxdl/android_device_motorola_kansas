@@ -1,3 +1,7 @@
-allow rild metadata_file:dir { search open read };
-allow rild gsi_metadata_file:dir { search open read };
-get_prop(rild, vendor_mi_prop)
+# Moto props
+get_prop(rild, vendor_mot_prop)
+
+# /proc/bootinfo
+allow rild vendor_proc_hw:file r_file_perms;
+
+set_prop(rild, vendor_mtk_radio_prop)

@@ -1,1 +1,1 @@
-allow nvram_daemon persist_data_file:dir { read search };
+get_prop(nvram_daemon, vendor_mot_prop)

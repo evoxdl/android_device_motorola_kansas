@@ -1,3 +1,2 @@
-r_dir_file(charger_vendor, sysfs_power_supply)
-
-allow charger_vendor sysfs_power_supply:file rw_file_perms;
+rw_dir_file(charger_vendor, sysfs_batteryinfo)
+rw_dir_file(charger_vendor, sysfs_power_supply)

@@ -1,15 +1,39 @@
-# Audio
-vendor.audiomediatek. u:object_r:vendor_audioserver_prop:s0
-
 # Camera
-persist.vendor.camera. u:object_r:vendor_camera_persist_prop:s0
-vendor.camera. u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.privapp.list  u:object_r:vendor_persist_camera_prop:s0
+vendor.mot_ota_tuning.valid      u:object_r:vendor_mot_camera_prop:s0
 
-# RIL
-ro.vendor.oem.sno                        u:object_r:vendor_mtk_radio_prop:s0
-ro.vendor.oem.psno                       u:object_r:vendor_mtk_radio_prop:s0
-ro.vendor.oem.imei                       u:object_r:vendor_mtk_radio_prop:s0
-ro.vendor.oem.meid                       u:object_r:vendor_mtk_radio_prop:s0
+# FPS
+vendor.hw.fingerprint.status u:object_r:vendor_mot_prop:s0
+persist.vendor.hardware.fingerprint u:object_r:vendor_mot_prop:s0
+vendor.fingerprint u:object_r:vendor_mot_prop:s0
+vendor.hw.fps.ident  u:object_r:vendor_mot_prop:s0
 
-# Thermal
-vendor.sys.thermal.data.path             u:object_r:vendor_thermal_prop:s0
+# Motorola
+persist.vendor.boot.bootseq.history       u:object_r:vendor_mot_prop:s0
+ro.vendor.boot_seq                        u:object_r:vendor_mot_prop:s0
+ro.vendor.bootreason                      u:object_r:vendor_mot_prop:s0
+ro.vendor.esimid                          u:object_r:vendor_mot_prop:s0
+ro.vendor.hw.                             u:object_r:vendor_mot_prop:s0
+ro.vendor.manufacturedate                 u:object_r:vendor_mot_prop:s0
+ro.vendor.mot.cust_md5                    u:object_r:vendor_mot_prop:s0
+ro.vendor.mot.gki.                        u:object_r:vendor_mot_prop:s0
+ro.vendor.mot.hw.                         u:object_r:vendor_mot_prop:s0
+ro.vendor.mot.iccid                       u:object_r:vendor_mot_prop:s0
+ro.vendor.product.device                  u:object_r:vendor_mot_prop:s0
+ro.vendor.product.display                 u:object_r:vendor_mot_prop:s0
+ro.vendor.product.model                   u:object_r:vendor_mot_prop:s0
+ro.vendor.product.name                    u:object_r:vendor_mot_prop:s0
+
+# NFC
+persist.vendor.nfc. u:object_r:vendor_nfc_prop:s0
+vendor.nfc.fw_status u:object_r:vendor_nfc_prop:s0
+vendor.qti.nfc.chipid u:object_r:vendor_nfc_prop:s0
+
+
+# SKU
+ro.boot.product.hardware.sku u:object_r:vendor_sku_prop:s0
+ro.vendor.product.hardware.sku.variant u:object_r:vendor_sku_prop:s0
+
+# Audio and virtual-display configuration
+ro.vendor.qti.va_aosp.support u:object_r:vendor_kansas_audio_config_prop:s0 exact bool
+vendor.display.vds_allow_hwc u:object_r:vendor_kansas_display_config_prop:s0 exact bool

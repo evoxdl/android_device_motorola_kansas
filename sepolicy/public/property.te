@@ -1,1 +1,6 @@
-system_public_prop(vendor_mi_prop)
+system_public_prop(system_mot_camera_prop)
+system_public_prop(system_mot_prop)
+system_public_prop(system_mot_radio_prop)
+
+# Legacy Goodix property read by the vendor fingerprint HAL.
+system_public_prop(system_goodix_debug_prop)

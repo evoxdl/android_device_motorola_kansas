@@ -1,0 +1,2 @@
+get_prop(mnld, vendor_mot_prop)
+get_prop(mnld, system_mot_prop)

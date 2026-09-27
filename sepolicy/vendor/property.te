@@ -1,4 +1,15 @@
-vendor_public_prop(vendor_audioserver_prop)
-vendor_public_prop(vendor_thermal_engine_prop)
-vendor_restricted_prop(vendor_camera_prop)
-vendor_internal_prop(vendor_camera_persist_prop)
+# Motorola
+vendor_public_prop(vendor_mot_prop);
+
+# SKU prop
+vendor_internal_prop(vendor_sku_prop);
+
+# Camera
+vendor_restricted_prop(vendor_mot_camera_prop);
+
+# NFC
+vendor_internal_prop(vendor_nfc_prop);
+
+# Framework reads of vendor audio/display configuration.
+vendor_restricted_prop(vendor_kansas_audio_config_prop)
+vendor_restricted_prop(vendor_kansas_display_config_prop)
