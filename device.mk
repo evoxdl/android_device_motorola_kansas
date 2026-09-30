@@ -306,8 +306,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/hidl/mtkpower/1.2/default \
     hardware/mediatek/libaedv \
-    hardware/mediatek/libmtkperf_client \
-    hardware/motorola
+    hardware/mediatek/libmtkperf_client
 
 # USB
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)

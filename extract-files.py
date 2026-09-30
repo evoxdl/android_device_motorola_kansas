@@ -32,7 +32,6 @@ namespace_imports = [
     'hardware/mediatek',
     'hardware/mediatek/libaedv',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/motorola',
 ]
 
 def blob_fixup_graphic_buffer_size(
